@@ -1,4 +1,5 @@
 # Customer Management System - Engineering Exercise
+# Author: Harries Hernandez
 
 A complete web application built with PHP, JavaScript, and Tailwind CSS for managing customer information with additional features.
 
@@ -26,6 +27,7 @@ A complete web application built with PHP, JavaScript, and Tailwind CSS for mana
 - **Chrome API**: Uses `getDisplayMedia()` for screen sharing
 - **Real-time**: Live screen sharing with start/stop controls
 - **Security**: Proper error handling and stream management
+- **Limitations**: No available TURN server so does not work remotely
 
 ## Database Schema
 
@@ -68,12 +70,13 @@ CREATE TABLE customers (
 ### File Structure
 ```
 engineering-excercise/
-├── index.php                    # Customer entry form
-├── review.php                   # Customer review page with calculator & screen share
+├── index.php                   # Customer entry form
+├── review.php                  # Customer review page with calculator & screen share
 ├── calculator_display.php      # Calculator display iframe
 ├── calculator_buttons.php      # Calculator buttons iframe
-├── screen_share_simple.php     # Screen share host (Google Chrome API)
-├── screen_viewer_simple.php    # Screen share viewer
+├── firebase_webrtc_host.php    # Firebase WebRTC screen share host
+├── firebase_webrtc_viewer.php  # Firebase WebRTC screen share viewer
+├── webrtc_signaling.php        # WebRTC signaling server
 ├── test_cases.php              # Comprehensive test cases
 ├── config.php                  # Database configuration
 ├── setup_database.php          # Database setup script
